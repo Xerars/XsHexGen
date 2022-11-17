@@ -30,8 +30,8 @@ int main(int argc,char *argv[])
 
   printf("/* Embedded Image File : %s */\n",fname);
   printf("const int fsize  = %d;        /* File Size */\n",fsize);
-  printf("const unsigned char *file = {\n");
-  
+  printf("const unsigned char *file =\n");
+  printf("{\n");
   int i;
   for(i=0;i<fsize;++i)
     printf("0x%02x%s",b[i],i==fsize-1?"":((i+1)%16==0?",\n":","));
